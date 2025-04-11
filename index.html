@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ManFood - Livraison de repas à domicile</title>
+    <meta name="description" content="Commandez vos plats préférés en ligne à Man et faites-vous livrer rapidement. Découvrez notre menu varié et profitez de nos offres spéciales.">
+    <meta name="keywords" content="livraison repas , restaurant en ligne , commander repas à Man, plats cuisinés, Man, Côte d'Ivoire">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Général */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Section Hero */
+.hero {
+    background: url('spaguetti.jpeg') no-repeat center center/cover;
+    color: #000;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    background-color: #ff6b6b;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+/* Section Présentation */
+.presentation {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.presentation h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.feature i {
+    font-size: 2.5rem;
+    color: #ff6b6b;
+    margin-bottom: 15px;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Section Avis Clients */
+.avis-clients {
+    background-color: #f4f4f4;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.avis-clients h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.avis {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.avis-item {
+    width: 30%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.avis-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.avis-item p {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.avis-item span {
+    font-weight: 600;
+}
+
+/* Section Fidélité */
+.fidelite {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #ff6b6b;
+    color: #fff;
+}
+
+.fidelite h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.fidelite ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.fidelite ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.fidelite ul li i {
+    margin-right: 10px;
+}
+
+.fidelite .btn {
+    background-color: #fff;
+    color: #ff6b6b;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-section {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.footer-section p, .footer-section a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.footer-section a:hover {
+    color: #ff6b6b;
+}
+
+.footer-section form {
+    display: flex;
+}
+
+.footer-section input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    flex: 1;
+}
+
+.footer-section button {
+    padding: 10px 20px;
+    background-color: #ff6b6b;
+    border: none;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.hero, .presentation, .avis-clients, .fidelite {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/*chatbot css*/
+
+/* Style du chatbot */
+.chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.chatbot-icon {
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.chatbot-icon:hover {
+    transform: scale(1.1);
+}
+
+.chatbot-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.chat-window {
+    width: 350px;
+    height: 500px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    display: none;
+    flex-direction: column;
+}
+
+.chat-header {
+    background: #075E54;
+    color: white;
+    padding: 15px;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.chat-header img {
+    width: 30px;
+    height: 30px;
+}
+
+.chat-body {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background: #f0f0f0;
+}
+
+.message {
+    margin: 10px 0;
+    padding: 10px 15px;
+    border-radius: 20px;
+    max-width: 80%;
+}
+
+.user-message {
+    background: #DCF8C6;
+    margin-left: auto;
+}
+
+.bot-message {
+    background: white;
+    margin-right: auto;
+}
+
+.whatsapp-option {
+    background: #25D366;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.chat-input {
+    display: flex;
+    padding: 15px;
+    gap: 10px;
+    border-top: 1px solid #ddd;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+}
+
+button {
+    background: #075E54;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+/* Ajouter ces styles */
+.message {
+    margin: 10px 0;
+    padding: 10px 15px;
+    border-radius: 20px;
+    max-width: 80%;
+    color: #333; /* Couleur du texte */
+    font-size: 14px;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.user-message {
+    background: #DCF8C6;
+    margin-left: auto;
+    color: #075E54; /* Couleur texte utilisateur */
+}
+
+.bot-message {
+    background: #FFFFFF;
+    margin-right: auto;
+    color: #333; /* Couleur texte bot */
+    border: 1px solid #eee;
+}
+
+/* Animation des messages */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.message {
+    animation: fadeIn 0.3s ease-out;
+}
+
+
+
+
+.whatsapp-option {
+    display: flex !important; /* Forcer l'affichage */
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    margin: 10px 0;
+    background: #25D366;
+    color: white !important;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.whatsapp-option:hover {
+    transform: scale(1.02);
+    background: #128C7E;
+}
+
+.whatsapp-option img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+}
+
+/* Animation d'apparition */
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1> ManFood</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="menu.php">Menu</a></li>
+                    <li><a href="commander.php">Commander</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Section Hero -->
+    <section class="hero">
+        <div class="container">
+            <h2>Bienvenue sur notre site de réservation de repas !</h2>
+            <p>Commandez vos plats préférés et faites-vous livrer rapidement.</p>
+            <a href="menu.php" class="btn">Voir le menu</a>
+        </div>
+    </section>
+
+    <!-- Section Présentation -->
+    <section class="presentation">
+        <div class="container">
+            <h2>Pourquoi choisir ManFOOD ?</h2>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>Livraison rapide</h3>
+                    <p>Nous livrons vos plats en moins de 45 minutes.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Plats de qualité</h3>
+                    <p>Des ingrédients frais et des recettes savoureuses.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-star"></i>
+                    <h3>Service client</h3>
+                    <p>Une équipe à votre écoute pour répondre à vos besoins.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Avis Clients -->
+    <section class="avis-clients">
+        <div class="container">
+            <h2>Ce que disent nos clients</h2>
+            <div class="avis">
+                <div class="avis-item">
+                    <img src="./assets/images/client1.jpg" alt="Client 1">
+                    <p>"Les plats sont délicieux et la livraison est toujours à l'heure. Je recommande !"</p>
+                    <span> koffi willibrod</span>
+                </div>
+                <div class="avis-item">
+                    <img src="assets/images/client2.jpg" alt="Client 2">
+                    <p>"Un service impeccable et des plats savoureux. J'adore !"</p>
+                    <span>adboulaye D.</span>
+                </div>
+                <div class="avis-item">
+                    <img src="assets/images/client3.jpg" alt="Client 3">
+                    <p>"Je commande régulièrement et je suis toujours satisfait. Bravo !"</p>
+                    <span>- kadi diarassouba</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Fidélité -->
+    <section class="fidelite">
+        <div class="container">
+            <h2>Programme de fidélité</h2>
+            <p>Rejoignez notre programme de fidélité et bénéficiez d'offres exclusives :</p>
+            <ul>
+                <li><i class="fas fa-gift"></i> Réductions sur vos commandes</li>
+                <li><i class="fas fa-star"></i> Points cumulables</li>
+                <li><i class="fas fa-truck"></i> Livraison gratuite après 10 commandes</li>
+            </ul>
+            <a href="commander.php" class="btn">Commander maintenant</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contactez-nous</h3>
+                    <p><i class="fas fa-phone"></i> +225 0708817956</p>
+                    <p><i class="fas fa-envelope"></i> contact@ManFood.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Man, Côte d'Ivoire</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Suivez-nous</h3>
+                    <a href="https://web.facebook.com/?_rdc=1&_rdr#"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/accounts/emailsignup/"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <form action="subscribe_newsletter.php" method="POST">
+                        <input type="email" name="email" placeholder="Votre email" required>
+                        <button type="submit">S'inscrire</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Corps du chatbot -->
+<div class="chatbot-container">
+    <div class="chatbot-icon" onclick="toggleChat()">
+        <img src="https://cdn-icons-png.flaticon.com/128/8943/8943378.png" viewBox="0 0 24 24"><path d="M19.005 3.175H4.674C3.642 3.175 3 4.214 3 5.222v13.421c0 1.008.642 2.047 1.674 2.047h14.331c1.032 0 1.674-1.039 1.674-2.047V5.222c0-1.008-.642-2.047-1.674-2.047zm-4.991 9.157H8.987V11.1h5.027v1.232zm0 2.516H8.987v-1.232h5.027v1.232zm0 2.516H8.987v-1.232h5.027v1.232z"/></svg>
+    </div>
+    
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <img src="https://cdn-icons-png.flaticon.com/128/8943/8943378.png" alt="Chat">
+            <h3>Assistant Virtuel</h3>
+        </div>
+        
+        <div class="chat-body" id="chatBody">
+            <div class="message bot-message">Bonjour ! Comment puis-je vous aider aujourd'hui ? 😊</div>
+        </div>
+        
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Tapez votre message...">
+            <button onclick="sendMessage()">Envoyer</button>
+        </div>
+    </div>
+</div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 ManFOOD. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+
+        // Fonctions du chatbot
+        let isChatOpen = false;
+        
+        function toggleChat() {
+            const chatWindow = document.getElementById('chatWindow');
+            isChatOpen = !isChatOpen;
+            chatWindow.style.display = isChatOpen ? 'flex' : 'none';
+        }
+        
+        async function sendMessage() {
+            const userInput = document.getElementById('userInput');
+            const message = userInput.value.trim();
+            
+            if (!message) return;
+        
+            // Ajouter le message utilisateur
+            addMessage(message, 'user');
+            userInput.value = '';
+        
+            // Réponse du bot
+            const response = await getBotResponse(message);
+            addMessage(response.text, 'bot');
+        
+            // Afficher l'option WhatsApp si nécessaire
+            if(response.showWhatsApp) {
+                showWhatsAppOption(message);
+            }
+        }
+
+
+        function getBotResponse(userMessage) {
+    const lowerMsg = userMessage.toLowerCase();
+    
+    // Détection des mots-clés
+    const keywords = {
+        menu: ['menu', 'plats', 'langue'],
+        livraison: ['livraison', 'zone', 'quartier'],
+        paiement: ['payer', 'avis', 'orange money'],
+        contact: ['appeler', 'téléphone', 'whatsapp' , 'paiement' , 'resérvation' , 'contact'],
+        local: ['produits', 'local', 'heures' , 'promo' , 'urgent', 'régime', 'annulation']
+    };
+
+    // Trouver la meilleure réponse
+    for(const [key, terms] of Object.entries(keywords)) {
+        if(terms.some(term => lowerMsg.includes(term))) {
+            return responses[key];
+        }
+    }
+    
+    return responses.default;
+}
+
+
+
+        
+        function addMessage(text, sender) {
+            const chatBody = document.getElementById('chatBody');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${sender}-message`;
+            messageDiv.textContent = text;
+            chatBody.appendChild(messageDiv);
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+        
+        async function getBotResponse(message) {
+            // Ajoutez ici votre logique de réponse (peut être connecté à une API)
+                        const responses = {
+                'bonjour': '🌍 Bonjour ! Bienvenue sur Bon  Manfood - Votre service de réservation de repas préféré à Man ! Comment puis-je vous aider ?',
+                
+                'menu': '📃 Nos spécialités :\n- Poulet Kedjenou\n- Alloco Poisson\n- Attiéké Poisson Braisé\n- Sauce Claire avec Foufou\n- Plats végétariens\nVoir le menu complet : https://bonappeman.com/menu',
+
+                'heures': '🕒 Horaires de service :\nLundi-Dimanche : 10h - 22h\nService continu les jours fériés !',
+                
+                'promo': '🎉 SPECIAL MAN : 20% de réduction sur les commandes avant 12h avec le code "MANAPPETIT"',
+                'avis': '⭐ Nos clients de Man disent :\n"Meilleur alloco de la région !" - Fatou, Sokoura\n"Service ultra-rapide" - Yves, Quartier Commerce',
+                'langue': '🌐 Choisissez votre langue :\n1. Français\n2. Yacouba\n(En développement : Dioula)',
+                'merci' : 'je vous en prie, si vous avez besoins des informations , je suis disponible à vous repondre .' ,         
+
+                'livraison': `🚚 Zones de livraison à Man :
+            - Quartier Commerce
+            - Sokoura
+            -gbepleu, grand-gbapleu, et partout dans la ville de man
+            - Et 5km autour du centre-ville
+            - Frais de livraison : 500 FCFA
+            - En dehors de la ville de Man les frais de livraison sont a 1000 Fcfa.
+           `,
+
+                'paiement': '💳 Moyens de paiement :\n- Espèces\n- Orange Money (07 08817956)\n- Moov Money(0141347921)\n- Carte bancaire sécurisée',
+
+                'réservation': '🍛 Pour réserver :\n1. Choisissez votre plat\n2. Sélectionnez l\'horaire\n3. Validez par SMS au 07 08 81 79 56\n Ou via WhatsApp : +22507088179556',
+
+                'contact': `📞 Contactez-nous :
+            - Appel : 0708817956
+            - WhatsApp : 0708817956
+            - Siège : Rue des Délices, Quartier Commerce, Man`,
+
+                'urgent': '🚨 Commande urgente ? Appelez-nous directement au 07 08817956 (service express en 45min !)',
+
+                'local': `🇨🇮 Nous utilisons 100% de produits ivoiriens :
+            - Riz de Man
+            - Poisson du Lac de Buyo
+            - Légumes des maraîchers locaux
+            Soutien à l\'économie régionale !`,
+
+                'régime': '🥦 Besoins spécifiques ?\n- Sans gluten\n- Végétarien\n- Halal\nPrévenez-nous lors de la commande !',
+
+                'annulation': '❌ Annulation :\nContactez-nous au moins 2h avant livraison au 07 08817956\n(Remboursement sous 72h)',
+                
+                'default': `😊 Désolé, je n'ai pas compris. Voici ce que je peux faire :
+            1. Prendre votre commande
+            2. Donner notre menu
+            3. Vous connecter à un agent
+            👉 0708817956`,
+
+            
+
+            
+            };
+                    
+            const lowerMessage = message.toLowerCase();
+            const responseText = Object.keys(responses).find(key => lowerMessage.includes(key)) 
+                                ? responses[Object.keys(responses).find(key => lowerMessage.includes(key))] 
+                                : responses.default;
+        
+            return {
+                text: responseText,
+                showWhatsApp: responseText === responses.default
+            };
+        }
+        function showWhatsAppOption(message) {
+    const whatsappNumber = "?"; // Remplacez par votre numéro
+    const encodedMessage = encodeURIComponent(`[Depuis le chatbot] ${message}`);
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+    const whatsappDiv = document.createElement('a');
+    whatsappDiv.className = 'whatsapp-option';
+    whatsappDiv.href = whatsappUrl;
+    whatsappDiv.target = "_blank";
+    whatsappDiv.innerHTML = `
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTE3LjQ3MiAxNC4zODJjLS4xOTggLS4xMTggLS40NjYgLS4xOTggLTEuMDgygLS4xNzRsLS4xMjQgLjAxMmMtLjM0NiAwLS0uNDY2LS4wNDctLjY2NS4yMDgtLS4yLjI1NiAtLjc3NCAuODQ4IC0uOTQ0IDEuMDE2LS4xNjQgLjE3MiAtLjMyOCAuMTk0IC0uNjA4IC4xMTQgLS4yODQgLS4wODQgLTEuMjA0LS40NDYtMi4yOTgtMS40Mi0uODQ4LS43MjYtMS40Mi0xLjYyLTEuNTg4LTEuODk2LS4xNjQtLjI4NCAtLjAxOC0uNDM4LjEyMi0uNTc4LjEyNi0uMTI2LjI4NC0uMzMuNDI0LS40NDIuMTQtLjExMi4xOSLS4xOS4yODQtLjA2NC4wOTguMTI0LjY2NiAxLjI3OC45MTQgMS43NS4yNDYuNDY4LjM3LjQ2OC42NTQuMDE0LjIwMi0uMTk4LjI0Ni0uMzUuMzY0LS41OTQuMTE4LS4yNDQgLjA1Ni0uNDY4IC0uMDE0LS42NTQtLS4wNy0uMTg0LS42NjUtMS42OC0uOTE0LTIuMjk0LS4yNDYtLjYxMiAuNS0uNjE4IC42NjUtLjYxOC4xNzggMCAuMzU0LjA4NC40NjYuMTcyLjYxOC42MyAxLjM1NiAxLjU4MiAxLjQ4NiAxLjY5NC4xMjYuMTEyLjI1Mi4wNy40NTYtLjA0Mi4yLS4xMTIuODQ4LS4zMSAxLjM0LS41LjQ5LS4xOS44MDYtLjI3OC45NjgtLjI3OC4xNjQgMCAuMjguMDQyLjM5Ni4xMjYuMTE2LjA4NC4xMTYuMjU0LjA5OC40MzYtLjA0Mi4yODQtLjY1NC44NDYtLjkxNCAxLjAwNC0uMjU0LjE1OC0uNTE0LjIyNC0uODI2LjA3eiIvPjwvc3ZnPg==" alt="WhatsApp">
+        Envoyer sur WhatsApp
+    `;
+
+    // Animation
+    whatsappDiv.style.animation = 'slideIn 0.3s ease-out';
+    
+    const chatBody = document.getElementById('chatBody');
+    chatBody.appendChild(whatsappDiv);
+    
+    // Défilement automatique
+    chatBody.scrollTop = chatBody.scrollHeight;
+}
+      
+    </script>
+
+
+</body>
+</html>

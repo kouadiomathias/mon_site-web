@@ -1,0 +1,254 @@
+/* Général */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Section Hero */
+.hero {
+    background: url('assets/images/hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    background-color: #ff6b6b;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+/* Section Présentation */
+.presentation {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.presentation h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.feature i {
+    font-size: 2.5rem;
+    color: #ff6b6b;
+    margin-bottom: 15px;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Section Avis Clients */
+.avis-clients {
+    background-color: #f4f4f4;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.avis-clients h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.avis {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.avis-item {
+    width: 30%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.avis-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.avis-item p {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.avis-item span {
+    font-weight: 600;
+}
+
+/* Section Fidélité */
+.fidelite {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #ff6b6b;
+    color: #fff;
+}
+
+.fidelite h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.fidelite ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.fidelite ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.fidelite ul li i {
+    margin-right: 10px;
+}
+
+.fidelite .btn {
+    background-color: #fff;
+    color: #ff6b6b;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-section {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.footer-section p, .footer-section a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.footer-section a:hover {
+    color: #ff6b6b;
+}
+
+.footer-section form {
+    display: flex;
+}
+
+.footer-section input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    flex: 1;
+}
+
+.footer-section button {
+    padding: 10px 20px;
+    background-color: #ff6b6b;
+    border: none;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.hero, .presentation, .avis-clients, .fidelite {
+    animation: fadeIn 1s ease-in-out;
+}
